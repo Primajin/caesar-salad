@@ -1,0 +1,36 @@
+{
+  "name": "caesar-salad",
+  "version": "0.0.1",
+  "description": "To Rome and back again",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "coverage": "c8 ava",
+    "test": "ava",
+    "test:watch": "ava --watch",
+    "lint": "xo",
+    "lint:fix": "xo --fix",
+    "lint:watch": "npx nodemon -x npm run lint:fix --ext js,json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Primajin/caesar-salad.git"
+  },
+  "keywords": [
+    "caesar",
+    "cypher",
+    "cryptography",
+    "salad"
+  ],
+  "author": "Jannis Hell",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/Primajin/caesar-salad/issues"
+  },
+  "homepage": "https://github.com/Primajin/caesar-salad#readme",
+  "devDependencies": {
+    "ava": "^3.15.0",
+    "c8": "^7.10.0",
+    "xo": "^0.47.0"
+  }
+}
