@@ -1,3 +1,4 @@
+[![codecov](https://codecov.io/gh/Primajin/caesar-salad/branch/main/graph/badge.svg?token=ouxuHl9wrD)](https://codecov.io/gh/Primajin/caesar-salad)
 # Caesar Salad 
 
 To Rome and back again
