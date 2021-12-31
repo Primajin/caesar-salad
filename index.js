@@ -10,10 +10,10 @@ export const applyKey = (text, key) => {
 		const codePoint = text.codePointAt(i);
 		const currentChar = text.charAt(i);
 		if (/[A-Z]/.test(currentChar)) {
-			cipherText += String.fromCodePoint((codePoint - 65 + (key[j % key.length]) % 26) + 65);
+			cipherText += String.fromCodePoint(((codePoint - 65 + key[j % key.length]) % 26) + 65);
 			j++;
 		} else if (/[a-z]/.test(currentChar)) {
-			cipherText += String.fromCodePoint((codePoint - 97 + (key[j % key.length]) % 26) + 97);
+			cipherText += String.fromCodePoint(((codePoint - 97 + key[j % key.length]) % 26) + 97);
 			j++;
 		} else {
 			cipherText += currentChar;
