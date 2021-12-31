@@ -8,3 +8,7 @@ test('abc on UPPERCASE', t => {
 test('abc on lowercase', t => {
 	t.is(applyKey('the quick brown fox jumps over the lazy dog.', [0, 1, 2]), 'tig qvkcl drpyn gqx kwmqu owgr uje mczz foh.');
 });
+
+test('empty on lowercase', t => {
+	t.is(applyKey('This just stays the same as before!', []), 'This just stays the same as before!');
+});
