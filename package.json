@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "coverage": "c8 ava && codecov",
+    "coverage": "c8 --reporter=lcov ava && codecov",
     "test": "ava",
     "test:watch": "ava --watch",
     "lint": "xo",
