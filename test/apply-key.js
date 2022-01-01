@@ -10,11 +10,11 @@ test('abc on lowercase', t => {
 });
 
 test('permutations', t => {
-	t.is(applyKey('AaA', [1]), 'BbB'); // just one
-	t.is(applyKey('AaA', [1, 1]), 'BbB'); // key shorter than message
-	t.is(applyKey('AaA', [1, 1, 1]), 'BbB'); // key equal length to message
-	t.is(applyKey('AaA', [1, 1, 1, 1]), 'BbB'); // key longer than message
-	t.is(applyKey('BbB', [1, 1, 1]), 'CcC'); // key same as message
-	t.is(applyKey('AaA', [0, 0, 0]), 'AaA'); // key only zeroes
-	t.is(applyKey('AaA', []), 'AaA'); // key empty
+	t.is(applyKey('AaA', [1]), 'BbB'); // Just one
+	t.is(applyKey('AaA', [1, 1]), 'BbB'); // Key shorter than message
+	t.is(applyKey('AaA', [1, 1, 1]), 'BbB'); // Key equal length to message
+	t.is(applyKey('AaA', [1, 1, 1, 1]), 'BbB'); // Key longer than message
+	t.is(applyKey('BbB', [1, 1, 1]), 'CcC'); // Key same as message
+	t.is(applyKey('AaA', [0, 0, 0]), 'AaA'); // Key only zeroes
+	t.is(applyKey('AaA', []), 'AaA'); // Key empty
 });
