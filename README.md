@@ -10,7 +10,7 @@ To Rome and back again
 2. But when you do, have fun with it
 3. Nfxes wsf kt jp psqdvetjqn (abc)
 
-This is to illustrate basic Caesar or rather Vigenère ciphers but with the twist - without ever sharing the key. All
+This is to illustrate basic Caesar or rather Vigenère ciphers but with a twist - without ever sharing the key. All
 keys remain private keys.
 
 Think of it like a precious chest. You add a lock and send the locked chest to a friend. They add their own lock and
