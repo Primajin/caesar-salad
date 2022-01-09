@@ -1,5 +1,5 @@
 import test from 'ava';
-import {makeKeyArray} from '../index.js';
+import {makeKeyArray} from '../src/cypher.js';
 
 test('ABC', t => {
 	t.deepEqual(makeKeyArray('ABC'), [0, 1, 2]);

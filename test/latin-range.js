@@ -1,5 +1,5 @@
 import test from 'ava';
-import {isInLatinUppercaseRange, isInLatinLowercaseRange, isWithinLatinRange} from '../index.js';
+import {isInLatinLowercaseRange, isInLatinUppercaseRange, isWithinLatinRange} from '../src/cypher.js';
 
 test('isInLatinUppercaseRange TRUE', t => {
 	t.is(isInLatinUppercaseRange(65), true);
