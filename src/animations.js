@@ -13,11 +13,13 @@ const sleep = milliseconds => new Promise(resolve => setTimeout(resolve, millise
  * @param {number} number - The number to use for each item in the array.
  */
 export const generateKeyArray = (text, number) => {
-	const cleanedText = text.replaceAll(/\s/g,'');
+	const cleanedText = text.replaceAll(/\s/g, '');
 	const keyArray = [];
+	// eslint-disable-next-line no-unused-vars
 	for (const letter of cleanedText) {
 		keyArray.push(number);
 	}
+
 	return keyArray;
 };
 
@@ -29,8 +31,8 @@ export const generateKeyArray = (text, number) => {
  * @param {boolean} [reverse=false] - Whether to count down from the end to the beginning.
  * @returns {Promise<void>}
  */
-export const animateTextCypher = async (text, steps = 5, delay= 0, reverse = false) => {
-	const keyArray = generateKeyArray(text, 5);
+export const animateTextCypher = async (text, steps = 5, delay = 0, reverse = false) => {
+	const keyArray = generateKeyArray(text, steps);
 	const countDown = async (value, index) => {
 		for (let i = value - 1; i >= 0; i--) {
 			await sleep(delay);
