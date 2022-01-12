@@ -8,18 +8,34 @@ import {applyKey} from './cypher.js';
 const sleep = milliseconds => new Promise(resolve => setTimeout(resolve, milliseconds));
 
 /**
- * Counts down and mutates each item in the array to 0, from beginning to the end.
- * @param {Array} keyArray - The array to count down.
- * @param {number} delay - The delay between each item.
+ * Generates a key array for every letter of the given text with given number.
+ * @param {string} text - The text to generate the key array for.
+ * @param {number} number - The number to use for each item in the array.
+ */
+export const generateKeyArray = (text, number) => {
+	const cleanedText = text.replaceAll(/\s/g,'');
+	const keyArray = [];
+	for (const letter of cleanedText) {
+		keyArray.push(number);
+	}
+	return keyArray;
+};
+
+/**
+ * Animates the given text to be revealed from either left to right or right to left.
+ * @param {string} text - The text to be animated.
+ * @param {number} [steps=5] - The number of steps to count down each letter.
+ * @param {number} [delay=0] - The delay between each count.
  * @param {boolean} [reverse=false] - Whether to count down from the end to the beginning.
  * @returns {Promise<void>}
  */
-export const countdownKeyArray = async (keyArray, delay, reverse = false) => {
+export const animateTextCypher = async (text, steps = 5, delay= 0, reverse = false) => {
+	const keyArray = generateKeyArray(text, 5);
 	const countDown = async (value, index) => {
 		for (let i = value - 1; i >= 0; i--) {
 			await sleep(delay);
 			keyArray[index] = i;
-			console.log('applyKey', applyKey('THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG.', keyArray));
+			console.log('applyKey', applyKey(text, keyArray));
 		}
 	};
 
@@ -34,9 +50,7 @@ export const countdownKeyArray = async (keyArray, delay, reverse = false) => {
 	}
 };
 
-const myArray = [5, 5, 5];
-await countdownKeyArray(myArray, 100, true);
+await animateTextCypher('Hello World', 5, 33, true);
 await sleep(1000);
 console.log('');
-const myArray2 = [5, 5, 5];
-await countdownKeyArray(myArray2, 100);
+await animateTextCypher('Hello World', 1, 100);
