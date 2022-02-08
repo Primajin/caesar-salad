@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "coverage": "c8 --reporter=lcov ava && codecov",
+    "coverage": "c8 --reporter=lcov ava",
     "test": "ava",
     "test:watch": "ava --watch",
     "lint": "xo",
@@ -31,7 +31,6 @@
   "devDependencies": {
     "ava": "^4.0.1",
     "c8": "^7.11.0",
-    "codecov": "^3.8.3",
     "xo": "^0.47.0"
   }
 }

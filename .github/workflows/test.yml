@@ -17,5 +17,7 @@ jobs:
         with:
           node-version: '17'
           cache: 'npm'
-      - run: npm install --legacy-peer-deps
+      - run: npm install
       - run: npm run coverage
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v2
