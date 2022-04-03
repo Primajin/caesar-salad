@@ -5,7 +5,13 @@
 To Rome and back again
 
 ## Example:
-<iframe src="examples/index.html" style="width:400px;height:235px;"></iframe>
+<style>
+iframe { border:0; height:235px; margin-left:-15px; width:calc(100% + 40px); }
+@media only screen and (min-width: 500px) {
+  iframe { margin:0; width:400px; }
+}
+</style>
+<iframe src="examples/index.html"></iframe>
 
 ## Rules:
 
