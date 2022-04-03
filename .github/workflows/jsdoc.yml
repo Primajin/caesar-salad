@@ -13,18 +13,24 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '17'
+          cache: 'npm'
       - name: Build
         uses: andstor/jsdoc-action@v1
         with:
           source_dir: ./src
           output_dir: ./docs
-          template: minami
+          template: ink-docstrap
           front_page: README.md
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./docs
+          config_file: conf.json
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'
           commit_message: ":memo: Update docs ${{ github.event.head_commit.message }}"
