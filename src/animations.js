@@ -25,19 +25,20 @@ export const generateKeyArray = (text, number) => {
 
 /**
  * Animates the given text to be revealed from either left to right or right to left.
- * @param {string} text - The text to be animated.
+ * @param {HTMLElement} element - The HTML element to animate.
  * @param {number} [steps=5] - The number of steps to count down each letter.
  * @param {number} [delay=0] - The delay between each count.
  * @param {boolean} [reverse=false] - Whether to count down from the end to the beginning.
  * @returns {Promise<void>}
  */
-export const animateTextCypher = async (text, steps = 5, delay = 0, reverse = false) => {
+export const animateTextCypher = async (element, steps = 5, delay = 0, reverse = false) => {
+	const text = element.textContent;
 	const keyArray = generateKeyArray(text, steps);
 	const countDown = async (value, index) => {
 		for (let i = value - 1; i >= 0; i--) {
 			await sleep(delay);
 			keyArray[index] = i;
-			console.log('applyKey', applyKey(text, keyArray));
+			element.textContent = applyKey(text, keyArray);
 		}
 	};
 
