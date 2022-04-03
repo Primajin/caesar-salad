@@ -51,8 +51,3 @@ export const animateTextCypher = async (text, steps = 5, delay = 0, reverse = fa
 		}
 	}
 };
-
-await animateTextCypher('Hello World', 5, 33, true);
-await sleep(1000);
-console.log('');
-await animateTextCypher('Hello World', 1, 100);
