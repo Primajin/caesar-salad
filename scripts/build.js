@@ -12,7 +12,7 @@ const getBuildParameters = parameters => {
 		bundle: true,
 		entryPoints: ['src/index.js'],
 		external: [],
-		outfile: 'docs/dist/index.js',
+		outfile: 'docs/examples/index.js',
 		platform: 'browser',
 		watch: false,
 	};
