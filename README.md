@@ -34,3 +34,7 @@ decrypt('SGD PTHBJ AQNVM ENW ITLOR NUDQ SGD KZYX CNF.', 'abc'); // SFB PSFBI YQM
 decrypt('SFB PSFBI YQMTM DLW HRLNP NTBQ RED JXYW ANE.', 'zyx'); // THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG.
 // Person two can now read the message
 ```
+
+## Documentation
+
+Docs can be found here: https://Primajin.github.io/caesar-salad/
