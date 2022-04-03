@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example</title>
+    <link rel="stylesheet" href="milligram.min.css">
+    <script src="index.js"></script>
+</head>
+<body>
+<h1>Animated Cypher</h1>
+<pre style="font-size: 150%">
+    Forward: &nbsp; <span id="content1">Hello World</span>
+    Backward: &nbsp;<span id="content2">Hello World</span>
+</pre>
+<button id="btn">Reload</button>
+<script>
+    const content1 = document.getElementById('content1');
+    const content2 = document.getElementById('content2');
+	window.caesar.animations.animateTextCypher(content1, 5, 100);
+	window.caesar.animations.animateTextCypher(content2, 5, 100, true);
+    document.getElementById('btn').addEventListener('click', () => {
+        window.location.reload();
+    });
+</script>
+</body>
+</html>
