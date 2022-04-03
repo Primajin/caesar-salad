@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example</title>
+</head>
+<body>
+<h1>Hello World</h1>
+<script src="cypher.js"></script>
+<script src="animations.js"></script>
+<script>
+	await animateTextCypher('Hello World', 5, 33, true);
+	await sleep(1000);
+	console.log('');
+	await animateTextCypher('Hello World', 1, 100);
+</script>
+</body>
+</html>

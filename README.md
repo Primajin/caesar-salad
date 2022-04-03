@@ -4,6 +4,9 @@
 
 To Rome and back again
 
+## Example:
+<iframe src="src/index.html"></iframe>
+
 ## Rules:
 
 1. Never write your own cryptography
@@ -35,6 +38,6 @@ decrypt('SFB PSFBI YQMTM DLW HRLNP NTBQ RED JXYW ANE.', 'zyx'); // THE QUICK BRO
 // Person two can now read the message
 ```
 
-## Documentation
+## Documentation:
 
 Docs can be found here: <https://Primajin.github.io/caesar-salad/>
