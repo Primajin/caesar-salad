@@ -5,7 +5,7 @@
 To Rome and back again
 
 ## Example:
-<iframe src="examples/index.html"></iframe>
+<iframe src="examples/index.html" style="width:400px;height:235px;"></iframe>
 
 ## Rules:
 
