@@ -46,4 +46,4 @@ decrypt('SFB PSFBI YQMTM DLW HRLNP NTBQ RED JXYW ANE.', 'zyx'); // THE QUICK BRO
 
 ## Documentation:
 
-Docs can be found here: <https://Primajin.github.io/caesar-salad/>
+Docs can be found here: <https://primajin.github.io/caesar-salad/>
