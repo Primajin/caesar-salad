@@ -33,7 +33,7 @@
   "homepage": "https://github.com/Primajin/caesar-salad#readme",
   "devDependencies": {
     "ava": "^5.3.0",
-    "c8": "^7.14.0",
+    "c8": "^8.0.0",
     "esbuild": "^0.17.19",
     "xo": "^0.54.2"
   }
