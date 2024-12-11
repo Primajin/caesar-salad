@@ -1,4 +1,3 @@
-/* globals window */
 import * as cypher from './cypher.js';
 import * as animations from './animations.js';
 
