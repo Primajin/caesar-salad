@@ -2,25 +2,25 @@ import test from 'ava';
 import {isInLatinLowercaseRange, isInLatinUppercaseRange, isWithinLatinRange} from '../src/cypher.js';
 
 test('isInLatinUppercaseRange TRUE', t => {
-	t.is(isInLatinUppercaseRange(65), true);
+	t.true(isInLatinUppercaseRange(65));
 });
 
 test('isInLatinUppercaseRange FALSE', t => {
-	t.is(isInLatinUppercaseRange(91), false);
+	t.false(isInLatinUppercaseRange(91));
 });
 
 test('isInLatinLowercaseRange TRUE', t => {
-	t.is(isInLatinLowercaseRange(97), true);
+	t.true(isInLatinLowercaseRange(97));
 });
 
 test('isInLatinLowercaseRange FALSE', t => {
-	t.is(isInLatinLowercaseRange(123), false);
+	t.false(isInLatinLowercaseRange(123));
 });
 
 test('isWithinLatinRange TRUE', t => {
-	t.is(isWithinLatinRange(65), true);
+	t.true(isWithinLatinRange(65));
 });
 
 test('isWithinLatinRange FALSE', t => {
-	t.is(isWithinLatinRange(123), false);
+	t.false(isWithinLatinRange(123));
 });
