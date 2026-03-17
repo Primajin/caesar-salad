@@ -13,7 +13,7 @@ const sleep = milliseconds => new Promise(resolve => setTimeout(resolve, millise
  * @param {number} number - The number to use for each item in the array.
  */
 export const generateKeyArray = (text, number) => {
-	const cleanedText = text.replaceAll(/\s/g, '');
+	const cleanedText = text.replaceAll(/\s/gv, '');
 	const keyArray = [];
 	// eslint-disable-next-line no-unused-vars
 	for (const letter of cleanedText) {
