@@ -106,3 +106,9 @@ dist
 # Custom
 /docs/examples/index.js
 /docs/examples/index.js.map
+
+# Generated JSDoc output (deployed to gh-pages by workflow)
+/docs/*.html
+/docs/fonts/
+/docs/scripts/
+/docs/styles/
