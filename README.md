@@ -1,6 +1,7 @@
 [![codecov](https://codecov.io/gh/Primajin/caesar-salad/branch/main/graph/badge.svg?token=ouxuHl9wrD)](https://codecov.io/gh/Primajin/caesar-salad)
+[![XO code style](https://shields.io/badge/code_style-5ed9c7?logo=xo&labelColor=gray)](https://github.com/xojs/xo)
 
-# Caesar Salad
+# Caesar Salad 🔐🥗
 
 To Rome and back again
 
@@ -44,6 +45,33 @@ decrypt('SFB PSFBI YQMTM DLW HRLNP NTBQ RED JXYW ANE.', 'zyx'); // THE QUICK BRO
 // Person two can now read the message
 ```
 
+## Installation:
+
+```sh
+npm install caesar-salad
+```
+
+## Usage:
+
+```js
+import { encrypt, decrypt } from 'caesar-salad';
+
+encrypt('Hello World', 'abc'); // Hfnnp Xptlg
+decrypt('Hfnnp Xptlg', 'abc'); // Hello World
+```
+
+## Development:
+
+```sh
+npm install        # Install dependencies
+npm test           # Run unit tests
+npm run lint       # Lint with XO
+npm run lint:fix   # Auto-fix lint issues
+npm run coverage   # Run tests with coverage
+npm run build      # Build (minified)
+```
+
 ## Documentation:
 
 Docs can be found here: <https://Primajin.github.io/caesar-salad/>
+
