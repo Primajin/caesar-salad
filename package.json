@@ -12,7 +12,13 @@
     "lint:fix": "xo --fix",
     "lint:watch": "npx nodemon -x npm run lint:fix --ext js,json",
     "test": "ava",
-    "test:watch": "ava --watch"
+    "test:watch": "ava --watch",
+    "docs": "jsdoc -c .jsdoc.json"
+  },
+  "xo": {
+    "ignores": [
+      "docs"
+    ]
   },
   "repository": {
     "type": "git",
@@ -34,7 +40,9 @@
   "devDependencies": {
     "ava": "^7.0.0",
     "c8": "^11.0.0",
+    "docdash": "^2.0.2",
     "esbuild": "^0.27.4",
+    "jsdoc": "^4.0.5",
     "xo": "^2.0.2"
   }
 }
