@@ -20,6 +20,9 @@
       "docs"
     ]
   },
+  "engines": {
+    "node": "^22.20 || ^24.12 || >=25"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Primajin/caesar-salad.git"
