@@ -6,6 +6,15 @@ on:
   pull_request:
     branches: [ main ]
 
+# Use a single shared concurrency group so all runs that write to gh-pages are
+# serialised. A per-ref group (e.g. preview-${{ github.ref }}) only serialises
+# within the same ref, allowing concurrent writes from different events (push vs
+# PR) to race and cause "remote contains work not present locally" conflicts.
+# cancel-in-progress: false ensures every queued run still executes.
+concurrency:
+  group: gh-pages
+  cancel-in-progress: false
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
