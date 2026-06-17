@@ -1,9 +1,10 @@
-/* eslint-disable no-await-in-loop,no-promise-executor-return */
+/* eslint-disable no-await-in-loop -- Animation updates depend on strict sequential timing. */
+/* eslint-disable no-promise-executor-return -- Promise executor directly returns setTimeout handle. */
 import {applyKey} from './cypher.js';
 /**
  Sleeps for the given amount of time.
- @param {number} milliseconds
- @returns {Promise<unknown>}
+ @param {number} milliseconds - Delay in milliseconds.
+ @returns {Promise<unknown>} A promise that resolves after the delay.
  */
 const sleep = milliseconds => new Promise(resolve => setTimeout(resolve, milliseconds));
 

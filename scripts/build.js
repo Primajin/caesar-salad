@@ -6,10 +6,10 @@ let watchmode = false;
 
 /**
  Iterate through the parameters and set the build parameters
- @param {Array} parameters
- @returns {object}
+ @param {Array<string>} cliParameters - Command line parameters.
+ @returns {object} The parsed build options for esbuild.
  */
-const getBuildParameters = parameters => {
+const getBuildParameters = cliParameters => {
 	const buildParameters = {
 		bundle: true,
 		entryPoints: ['src/index.js'],
@@ -20,7 +20,7 @@ const getBuildParameters = parameters => {
 	};
 
 	// Iterate through the parameters and overwrite the default options
-	for (const parameter of parameters) {
+	for (const parameter of cliParameters) {
 		const [key, value] = parameter.split('=');
 		buildParameters[key.replace('--', '')] = value ?? true;
 	}
