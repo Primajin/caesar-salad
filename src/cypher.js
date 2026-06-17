@@ -1,32 +1,32 @@
 /**
  Checks if given code point is within Latin uppercase range
  The code point for 'A' is 65, until the code point for 'Z' is 90.
- @param {number} codePoint
- @returns {boolean}
+ @param {number} codePoint - The character code point to check.
+ @returns {boolean} Whether the character is an uppercase Latin letter.
  */
 export const isInLatinUppercaseRange = codePoint => codePoint >= 65 && codePoint <= 90;
 
 /**
  Checks if given code point is within Latin lowercase range
  The code point for 'a' is 97, until the code point for 'z' is 122.
- @param {number} codePoint
- @returns {boolean}
+ @param {number} codePoint - The character code point to check.
+ @returns {boolean} Whether the character is a lowercase Latin letter.
  */
 export const isInLatinLowercaseRange = codePoint => codePoint >= 97 && codePoint <= 122;
 
 /**
  Checks if given code point is within Latin range
  The code point for 'A' is 65, until the code point for 'z' is 122.
- @param {number} codePoint
- @returns {boolean}
+ @param {number} codePoint - The character code point to check.
+ @returns {boolean} Whether the character is within the Latin letter range.
  */
 export const isWithinLatinRange = codePoint => codePoint >= 65 && codePoint <= 122;
 
 /**
  Applies the given key onto the text
- @param text {string}
- @param key {Array}
- @returns {string}
+ @param {string} text - The input text to transform.
+ @param {Array<number>} key - The key shift values to apply.
+ @returns {string} The transformed text.
  */
 export const applyKey = (text, key) => {
 	if (!key || key.length === 0) {
@@ -60,8 +60,8 @@ export const applyKey = (text, key) => {
  @example
  // returns [1, 4, 11, 11, 0, 18, 14]
  makeKeyArray('Bellaso!!Äö@');
- @param key
- @returns {Array}
+ @param {string} key - The key to convert into shift values.
+ @returns {Array<number>} The key represented as shift values.
  */
 export const makeKeyArray = key => {
 	const keyArray = [];
