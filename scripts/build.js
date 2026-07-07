@@ -2,7 +2,7 @@ import * as esbuild from 'esbuild';
 
 const parameters = process.argv.slice(2); // eslint-disable-line n/prefer-global/process
 
-let watchmode = false;
+let isWatchmode = false;
 
 /**
  Iterate through the parameters and set the build parameters
@@ -26,7 +26,7 @@ const getBuildParameters = cliParameters => {
 	}
 
 	if (buildParameters.watch) {
-		watchmode = true;
+		isWatchmode = true;
 	}
 
 	delete buildParameters.watch;
@@ -36,7 +36,7 @@ const getBuildParameters = cliParameters => {
 
 const context = await esbuild.context({...getBuildParameters(parameters)});
 
-if (watchmode) {
+if (isWatchmode) {
 	try {
 		console.log('Watching for changes...');
 		await context.watch();
