@@ -17,7 +17,8 @@
   },
   "xo": {
     "ignores": [
-      "docs"
+      "docs",
+      "package-lock.json"
     ]
   },
   "engines": {

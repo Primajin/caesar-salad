@@ -44,5 +44,6 @@ jobs:
         with:
           auto_fix: true
           xo: true
+          xo_args: "--ignore package-lock.json"
           commit_message: ":sparkles: Fix code style issues with ${linter}"
           git_email: Primajin@users.noreply.github.com
