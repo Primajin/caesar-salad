@@ -29,10 +29,10 @@ export const generateKeyArray = (text, number) => {
  @param {HTMLElement} element - The HTML element to animate.
  @param {number} [steps=5] - The number of steps to count down each letter.
  @param {number} [delay=0] - The delay between each count.
- @param {boolean} [reverse=false] - Whether to count down from the end to the beginning.
+ @param {boolean} [isReverse=false] - Whether to count down from the end to the beginning.
  @returns {Promise<void>}
  */
-export const animateTextCypher = async (element, steps = 5, delay = 0, reverse = false) => {
+export const animateTextCypher = async (element, steps = 5, delay = 0, isReverse = false) => {
 	const text = element.textContent;
 	const keyArray = generateKeyArray(text, steps);
 	const countDown = async (value, index) => {
@@ -43,7 +43,7 @@ export const animateTextCypher = async (element, steps = 5, delay = 0, reverse =
 		}
 	};
 
-	if (reverse) {
+	if (isReverse) {
 		for (let index = keyArray.length - 1, value = keyArray[index]; index >= 0; index--) {
 			await countDown(value, index);
 		}
