@@ -1,5 +1,5 @@
 {
-  "name": "caesar-salad",
+  "name": "@primajin/caesar-salad",
   "version": "0.0.1",
   "description": "To Rome and back again",
   "main": "index.js",

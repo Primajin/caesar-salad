@@ -1,5 +1,6 @@
 [![codecov](https://codecov.io/gh/Primajin/caesar-salad/branch/main/graph/badge.svg?token=ouxuHl9wrD)](https://codecov.io/gh/Primajin/caesar-salad)
 [![XO code style](https://shields.io/badge/code_style-5ed9c7?logo=xo&labelColor=gray)](https://github.com/xojs/xo)
+[![npm version](https://badge.fury.io/js/@primajin%2Fcaesar-salad.svg)](https://www.npmjs.com/package/@primajin/caesar-salad)
 
 # Caesar Salad 🔐🥗
 
@@ -48,13 +49,13 @@ decrypt('SFB PSFBI YQMTM DLW HRLNP NTBQ RED JXYW ANE.', 'zyx'); // THE QUICK BRO
 ## Installation:
 
 ```sh
-npm install caesar-salad
+npm install @primajin/caesar-salad
 ```
 
 ## Usage:
 
 ```js
-import { encrypt, decrypt } from 'caesar-salad';
+import { encrypt, decrypt } from '@primajin/caesar-salad';
 
 encrypt('Hello World', 'abc'); // Hfnnp Xptlg
 decrypt('Hfnnp Xptlg', 'abc'); // Hello World
