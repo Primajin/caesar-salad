@@ -1,0 +1,55 @@
+/* eslint-disable no-await-in-loop -- Animation updates depend on strict sequential timing. */
+/* eslint-disable no-promise-executor-return -- Promise executor directly returns setTimeout handle. */
+import {applyKey} from './cypher.js';
+/**
+ Sleeps for the given amount of time.
+ @param {number} milliseconds - Delay in milliseconds.
+ @returns {Promise<unknown>} A promise that resolves after the delay.
+ */
+const sleep = milliseconds => new Promise(resolve => setTimeout(resolve, milliseconds));
+
+/**
+ Generates a key array for every letter of the given text with given number.
+ @param {string} text - The text to generate the key array for.
+ @param {number} number - The number to use for each item in the array.
+ */
+export const generateKeyArray = (text, number) => {
+	const cleanedText = text.replaceAll(/\s/gv, '');
+	const keyArray = [];
+	// eslint-disable-next-line no-unused-vars
+	for (const letter of cleanedText) {
+		keyArray.push(number);
+	}
+
+	return keyArray;
+};
+
+/**
+ Animates the given text to be revealed from either left to right or right to left.
+ @param {HTMLElement} element - The HTML element to animate.
+ @param {number} [steps=5] - The number of steps to count down each letter.
+ @param {number} [delay=0] - The delay between each count.
+ @param {boolean} [isReverse=false] - Whether to count down from the end to the beginning.
+ @returns {Promise<void>}
+ */
+export const animateTextCypher = async (element, steps = 5, delay = 0, isReverse = false) => {
+	const text = element.textContent;
+	const keyArray = generateKeyArray(text, steps);
+	const countDown = async (value, index) => {
+		for (let i = value - 1; i >= 0; i--) {
+			await sleep(delay);
+			keyArray[index] = i;
+			element.textContent = applyKey(text, keyArray);
+		}
+	};
+
+	if (isReverse) {
+		for (let index = keyArray.length - 1, value = keyArray[index]; index >= 0; index--) {
+			await countDown(value, index);
+		}
+	} else {
+		for (const [index, value] of keyArray.entries()) {
+			await countDown(value, index);
+		}
+	}
+};

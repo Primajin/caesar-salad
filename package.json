@@ -1,0 +1,52 @@
+{
+  "name": "@primajin/caesar-salad",
+  "version": "0.0.2",
+  "description": "To Rome and back again",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.js --minify",
+    "start": "node scripts/build.js --watch --sourcemap",
+    "coverage": "c8 --reporter=lcov ava",
+    "lint": "xo",
+    "lint:fix": "xo --fix",
+    "lint:watch": "npx nodemon -x npm run lint:fix --ext js,json",
+    "test": "ava",
+    "test:watch": "ava --watch",
+    "docs": "jsdoc -c .jsdoc.json"
+  },
+  "xo": {
+    "ignores": [
+      "docs",
+      "package-lock.json"
+    ]
+  },
+  "engines": {
+    "node": "^22.20 || ^24.12 || >=25"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Primajin/caesar-salad.git"
+  },
+  "keywords": [
+    "caesar",
+    "cypher",
+    "vigenere",
+    "cryptography",
+    "salad"
+  ],
+  "author": "Jannis Hell",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/Primajin/caesar-salad/issues"
+  },
+  "homepage": "https://github.com/Primajin/caesar-salad#readme",
+  "devDependencies": {
+    "ava": "^8.0.1",
+    "c8": "^12.0.0",
+    "docdash": "^2.0.2",
+    "esbuild": "^0.28.1",
+    "jsdoc": "^4.0.5",
+    "xo": "^4.0.0"
+  }
+}
