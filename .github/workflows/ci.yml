@@ -6,13 +6,6 @@ on:
   pull_request:
     types: [ opened, reopened, synchronize, closed ]
 
-# Serialise every gh-pages write (the jsdoc deploy job here) so runs cannot race
-# on the gh-pages branch. cancel-in-progress: false ensures every queued run
-# still executes.
-concurrency:
-  group: gh-pages
-  cancel-in-progress: false
-
 # Least privilege by default; each job widens as needed.
 permissions: {}
 
@@ -21,6 +14,11 @@ jobs:
     if: github.event_name == 'push' || github.event.action != 'closed'
     runs-on: ubuntu-latest
     name: Generate documentation and push to Github pages.
+    # Serialise gh-pages writes so doc deploys cannot race. Scoped to this job
+    # (the only gh-pages writer) so the rest of CI is not serialised with it.
+    concurrency:
+      group: gh-pages
+      cancel-in-progress: false
     permissions:
       contents: read
     steps:
