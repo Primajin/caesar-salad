@@ -21,7 +21,7 @@ const getBuildParameters = cliParameters => {
 
 	// Iterate through the parameters and overwrite the default options
 	for (const parameter of cliParameters) {
-		const [key, value] = parameter.split('=');
+		const [key, value] = parameter.split('=', 2);
 		buildParameters[key.replace('--', '')] = value ?? true;
 	}
 
