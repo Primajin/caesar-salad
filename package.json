@@ -2,8 +2,17 @@
   "name": "@primajin/caesar-salad",
   "version": "0.0.2",
   "description": "To Rome and back again",
-  "main": "index.js",
+  "license": "UNLICENSED",
+  "repository": "github:Primajin/caesar-salad",
+  "homepage": "https://github.com/Primajin/caesar-salad#readme",
+  "bugs": "https://github.com/Primajin/caesar-salad/issues",
+  "author": "Jannis Hell",
   "type": "module",
+  "exports": "./index.js",
+  "sideEffects": false,
+  "engines": {
+    "node": "^22.20 || ^24.12 || >=25"
+  },
   "scripts": {
     "build": "node scripts/build.js --minify",
     "start": "node scripts/build.js --watch --sourcemap",
@@ -15,19 +24,10 @@
     "test:watch": "ava --watch",
     "docs": "jsdoc -c .jsdoc.json"
   },
-  "xo": {
-    "ignores": [
-      "docs",
-      "package-lock.json"
-    ]
-  },
-  "engines": {
-    "node": "^22.20 || ^24.12 || >=25"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Primajin/caesar-salad.git"
-  },
+  "files": [
+    "index.js",
+    "src"
+  ],
   "keywords": [
     "caesar",
     "cypher",
@@ -35,18 +35,18 @@
     "cryptography",
     "salad"
   ],
-  "author": "Jannis Hell",
-  "license": "UNLICENSED",
-  "bugs": {
-    "url": "https://github.com/Primajin/caesar-salad/issues"
-  },
-  "homepage": "https://github.com/Primajin/caesar-salad#readme",
   "devDependencies": {
     "ava": "^8.0.1",
     "c8": "^12.0.0",
     "docdash": "^2.0.2",
     "esbuild": "^0.28.1",
     "jsdoc": "^4.0.5",
-    "xo": "^4.0.0"
+    "xo": "^5.0.1"
+  },
+  "xo": {
+    "ignores": [
+      "docs",
+      "package-lock.json"
+    ]
   }
 }
