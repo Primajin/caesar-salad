@@ -43,10 +43,10 @@
     "jsdoc": "^4.0.5",
     "xo": "^5.0.1"
   },
-  "xo": {
-    "ignores": [
-      "docs",
-      "package-lock.json"
-    ]
+  "overrides": {
+    "katex": "^0.18.2",
+    "js-yaml@^3": {
+      "argparse": "^2.0.1"
+    }
   }
 }
